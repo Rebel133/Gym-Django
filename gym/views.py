@@ -73,23 +73,29 @@ def signup(request):
 
 
 def loginuser(request):
-    if request.method == "POST":
+    if request.user.is_authenticated:
+        return redirect('home')
 
-        loginusername = request.POST['loginusername']
-        loginpassword = request.POST['loginpassward']
+    else:
 
-        user = authenticate(username=loginusername, password=loginpassword)
+        if request.method == "POST":
 
-        if user is not None:
-            login(request, user)
-            messages.success(
-                request, "You Have Login Successfully Now You Can Checkout")
-            return redirect('login')
-        else:
-            messages.error(request, "Invalid Credentials || Please Try Again")
-            messages.error(
-                request, "Details Doest not Match... Please Signup If Not Done")
-            return redirect('login')
+            loginusername = request.POST['loginusername']
+            loginpassword = request.POST['loginpassward']
+
+            user = authenticate(username=loginusername, password=loginpassword)
+
+            if user is not None:
+                login(request, user)
+                messages.success(
+                    request, "You Have Login Successfully Now You Can Checkout")
+                return redirect('home')
+            else:
+                messages.error(
+                    request, "Invalid Credentials || Please Try Again")
+                messages.error(
+                    request, "Details Doest not Match... Please Signup If Not Done")
+                return redirect('login')
 
     return render(request, 'login.html')
 
