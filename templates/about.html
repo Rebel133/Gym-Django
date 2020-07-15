@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}About Our Gym{% endblock title %}
+{% block about %}active{% endblock about %}
+{% block body %}
+{% load static %}
+<div class="container">
+    <h2 class="text-center">About Our Trainner</h2>
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your
+                    mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="pr-5 col-md-5">
+            <img src="{% static 'img/about1.jpg' %}" alt="">
+            <title></title>
+            </svg>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your
+                    mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img src= {% static 'img/about2.jpg' %} alt="">
+                <title>Placeholder</title>
+            </svg>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your
+                    mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{% static 'img/about3.jpg' %}" alt="">
+                <title>Placeholder</title>
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}

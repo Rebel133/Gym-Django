@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Login For Gym{% endblock title %}
+{% block body %}
+<div class="container mt-5">
+    <h2 class="text-center">Please Login Here For Purchase Offer</h2>
+
+    <form action={% url 'login' %} method="POST"> {% csrf_token %}
+        <div class="form-group">
+            <label for="loginusername">Username</label>
+            <input type="text" class="form-control" id="pass" name="loginusername">
+        </div>
+        <div class="form-group">
+            <label for="loginpassward">Password</label>
+            <input type="password" class="form-control" id="pass" name="loginpassward">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+{% endblock body %}

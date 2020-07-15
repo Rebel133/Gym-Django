@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Membership Form{% endblock title %}
+{% block price %}active{% endblock price %}
+{% block body %}
+{% load static %}
+<section class="jumbotron text-center" style="background-color: #89f3d652;">
+  <div class="container">
+    <h1>Have Membership</h1>
+    <p class="lead text-muted">Enjoy this Special Offer at Our New Location 25-40% off – Email-Only Offer – Today Only.
+    </p>
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card price" style="width: 18rem;">
+        <div class="card-header text-center">
+          Beginner
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-center">
+            <h2>$12 / mo</h2>
+          </li>
+          <li class="list-group-item text-center">
+            <p> 10 users included</p>
+            <p>2 GB of storage</p>
+            <p> Email support </p>
+            <p>Help center access</p>
+          </li>
+          <li class="list-group-item text-center"><a href="/checkout"><button type="button"
+                class="btn shadow px-5 py-2 bt rounded-pill btn-success">Purchase</button></li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card price" style="width: 18rem;">
+        <div class="card-header text-center">
+          Intermidate
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-center">
+            <h2>$20 / mo</h2>
+          </li>
+          <li class="list-group-item text-center">
+            <p> Earn double points</p>
+            <p>10 GB of storage</p>
+            <p> Email support Tips </p>
+            <p>Help center access</p>
+          </li>
+          <li class="list-group-item text-center"><a href="/checkout"><button type="button"
+                class="btn shadow px-5 py-2 bt rounded-pill btn-success">Purchase</button></li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card price shadow" style="width: 18rem;">
+        <div class="card-header text-center">
+          Professional
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-center">
+            <h2>$25 / mo</h2>
+          </li>
+          <li class="list-group-item text-center">
+            <p> 20 users included</p>
+            <p>25 GB of storage</p>
+            <p> Email support Tips </p>
+            <p>Help center access</p>
+          </li>
+          <li class="list-group-item text-center"><a href="/checkout"><button type="button"
+                class="btn shadow px-5 py-2 bt rounded-pill btn-success">Purchase</button></li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

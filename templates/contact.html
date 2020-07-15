@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block contact %}active{% endblock contact %}
+{% block body %}
+{% load static %}
+<div class="container">
+    <h2 class="text-center mb-5 mt-2">You Can Submit Your Queries Here</h2>
+    <form action="/contact" method="POST"> {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="col">
+                <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <input type="text" name="email" class="form-control" placeholder="Enter Your Email id" required>
+                <small id="emailHelp" class="form-text ml-1 text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="col">
+                <input type="text" name='mobile' class="form-control" placeholder="Enter Your Mobile Number" required>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <label for="text">Enter Your Queries</label>
+                <textarea name="desc" class="form-control" id="text" rows="3"></textarea required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Submit</button>
+    </form>
+</div>
+{% endblock body %}
